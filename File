@@ -1,0 +1,25 @@
+Exo 1 Nom et année de naissance des artistes nés avant 1950.
+
+USE bddsql; 
+SELECT nom, annéeNaiss FROM artiste WHERE annéeNaiss < '1950-01-01';
+
+//
+
+Exo 2 Titre de tous les drames.
+
+USE bddsql; 
+SELECT titre FROM film WHERE genre = 'Drame';
+
+//
+
+Exo 3 Quels rôles a joué Bruce Willis.
+
+USE bddsql; 
+SELECT nomRôle, nom, prénom FROM role JOIN artiste WHERE nom="Willis";
+
+//
+
+Exo 4 Qui est le réalisateur de Memento.
+
+USE bddsql; 
+SELECT titre, nom, prénom, idArtiste, idRéalisateur FROM artiste JOIN film WHERE titre="Memento";  
